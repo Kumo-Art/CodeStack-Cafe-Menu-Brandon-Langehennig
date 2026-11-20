@@ -1,6 +1,6 @@
 namespace api.Models
 {
-    public class Categories
+    public class Categories : BaseEntity
     {
         
     }
