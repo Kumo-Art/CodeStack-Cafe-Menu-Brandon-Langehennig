@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using api.Models;
 using api.Repository;
 
@@ -16,19 +13,32 @@ namespace api.Services
             _repository = repository;
         }
 
-        public Task<Categories> AddAsync(Categories categories)
+        public async Task<Categories> AddAsync(Categories categories)
         {
-            throw new NotImplementedException();
+            Categories category = new Categories();
+            category.Id = categories.Id;
+            category.Name = categories.Name;
+
+            return await _repository.AddAsync(category);
         }
 
-        public Task<List<Categories>> GetAllAsync()
+        public async Task<List<Categories>> GetAllAsync()
         {
-            throw new NotImplementedException();
+             List<Categories> category = await _repository.GetAllAsync();
+
+             return category.ToList();
         }
 
-        public Task<Categories?> GetByIdAsync(int id)
+        public async Task<Categories?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            Categories? category = await _repository.GetByIdAsync(id);
+
+            if(category is null)
+            {
+                return null;
+            }
+
+            return category;
         }
     }
 }
