@@ -31,5 +31,12 @@ namespace api.Repository
         {
            return await _db.Items.FindAsync(id);
         }
+
+        public async Task UpdateAsync(Items items)
+        {
+            _db.Items.Update(items);
+
+            await _db.SaveChangesAsync();
+        }
     }
 }

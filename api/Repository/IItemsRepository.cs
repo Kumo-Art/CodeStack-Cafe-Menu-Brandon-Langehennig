@@ -9,5 +9,7 @@ namespace api.Repository
         Task<Items?> GetByIdAsync(int id);
 
         Task<Items> AddAsync(Items items);
+
+        Task UpdateAsync(Items item);
     }
 }

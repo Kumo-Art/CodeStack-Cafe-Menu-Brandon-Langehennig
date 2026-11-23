@@ -13,5 +13,7 @@ namespace api.Services
         Task<Items?> GetByIdAsync(int id);
 
         Task<Items> AddAsync(Items items);
+
+        Task<Items> UpdateAsync(int id, Items items);
     }
 }

@@ -44,5 +44,27 @@ namespace api.Services
 
             return item;
         }
+
+        public async Task<Items?> UpdateAsync(int id, Items items)
+        {
+            Items? item = await _repository.GetByIdAsync(id);
+
+            if(item is null)
+            {
+                return null;
+            }
+
+            item.Category = items.Category;
+            item.Description = items.Description;
+            item.Id = items.Id;
+            item.Name = items.Name;
+            item.Price = items.Price;
+            item.Tag = items.Tag;
+            item.Image = items.Image;
+
+            await _repository.UpdateAsync(item);
+
+            return item;
+        }
     }
 }

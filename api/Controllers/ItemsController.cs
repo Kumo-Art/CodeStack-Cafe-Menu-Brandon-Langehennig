@@ -45,5 +45,19 @@ namespace api.Controllers
 
             return CreatedAtAction(nameof(GetById), new {id = item.Id}, item);
         }
+
+        [HttpPut("updateitem/{id}")]
+
+        public async Task<ActionResult<Items>> Update(int id, [FromBody] Items items)
+        {
+            Items? item = await _services.UpdateAsync(id,items);
+
+            if(item is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(item);
+        }
     }
 }
