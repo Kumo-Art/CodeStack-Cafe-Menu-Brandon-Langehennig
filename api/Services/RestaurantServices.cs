@@ -16,14 +16,28 @@ namespace api.Services
             _repository = repository;
         }
 
-        public Task<Restaurant> AddAsync(Restaurant restaurant)
+        public async Task<Restaurant> AddAsync(Restaurant restaurant)
         {
-            throw new NotImplementedException();
+            Restaurant rest = new Restaurant();
+            rest.Name = restaurant.Name;
+            rest.Adrress = restaurant.Adrress;
+            rest.Hours = restaurant.Hours;
+            rest.Phone = restaurant.Phone;
+            rest.TagLine = restaurant.TagLine;
+
+            return await _repository.AddAsync(rest);
         }
 
-        public Task<Restaurant?> GetByIdAsync(int id)
+        public async Task<Restaurant?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            Restaurant? restaurant = await _repository.GetByIdAsync(id);
+
+            if(restaurant is null)
+            {
+                return null;
+            }
+
+            return restaurant;
         }
     }
 }

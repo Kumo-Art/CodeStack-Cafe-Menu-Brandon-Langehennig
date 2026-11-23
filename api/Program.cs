@@ -14,14 +14,14 @@ builder.Services.AddOpenApi();
 
  builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DatabaseConnection")));
 
-//  builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
-//  builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
+  builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+  builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
  
-//  builder.Services.AddScoped<IItemsRepository, ItemsRepository>();
-//  builder.Services.AddScoped<IItemsServices, ItemsServices>();
+  builder.Services.AddScoped<IItemsRepository, ItemsRepository>();
+  builder.Services.AddScoped<IItemsServices, ItemsServices>();
 
-//  builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
-//  builder.Services.AddScoped<IRestaurantServices, RestaurantServices>();
+  builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+  builder.Services.AddScoped<IRestaurantServices, RestaurantServices>();
 
  builder.Services.AddCors(Options =>
  {

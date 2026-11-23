@@ -29,12 +29,20 @@ namespace api.Services
         public async Task<List<Items>> GetAllAsync()
         {
             List<Items> items = await _repository.GetAllAsync();
-            //start here
+            
+            return items.ToList();
         }
 
-        public Task<Items?> GetByIdAsync(int id)
+        public async Task<Items?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            Items? item = await _repository.GetByIdAsync(id);
+
+            if(item is null)
+            {
+                return null;
+            }
+
+            return item;
         }
     }
 }
