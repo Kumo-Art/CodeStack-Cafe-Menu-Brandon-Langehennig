@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+using api.Models;
 
 namespace api.Services
 {
     public interface IRestaurantServices
     {
-        
+        Task<Restaurant?> GetByIdAsync(int id);
+
+         Task<Restaurant> AddAsync(Restaurant restaurant);
     }
 }
