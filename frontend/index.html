@@ -33,34 +33,168 @@
   <!-- ===== HEADER ===== -->
   <header>
     <!-- TODO: address, hours and phone go here (from the API) -->
-    <div id="restaurant-info"></div>
+    <div id="restaurant-info" class="grid grid-cols-3 justify-between text-center">
+    <p>ROOM 101 - MAIN CAMPUS</p>
+    <p>MON-FRI . 8AM-5PM</p>
+    <p>(555) 010-1010</p>
+    </div>
 
     <!-- TODO: the restaurant name — make it HUGE -->
-    <h1 id="restaurant-name"></h1>
+    <h1 id="restaurant-name" class="text-9xl font-bold text-wrap">CODESTACK</h1>
+    <h1 id="restaurant-name" class="text-9xl font-bold text-wrap">CAFE</h1>
 
     <!-- TODO: the tagline — italic serif, accent color -->
-    <p id="tagline"></p>
+    <p id="tagline" class="text-orange-400 font-italic text-4xl m-4 ml-10">fuel your next commit</p>
   </header>
 
   <!-- ===== CATEGORY NAV ===== -->
   <!-- TODO: make the nav stick to the top of the screen when you scroll -->
   <nav>
     <!-- One link per category goes in here (from the API) -->
-    <ul id="category-nav"></ul>
+     <div>
+    <ul id="category-nav">
+      <div class="grid grid-cols-4 border-4">
+      <li>BOOT UP</li>
+      <li>MAIN FUNCTIONS</li>
+      <li>SWEET SYNTAX</li>
+      <li>FUEL</li>
+      </div>
+    </ul>
+    </div>
   </nav>
 
   <!-- ===== MENU ===== -->
   <!-- One <section> per category goes in here (from the API) -->
   <main id="menu">
-    <p id="status">Loading the menu…</p>
+    <!--<p id="status">Loading the menu…</p>-->
+
+    <section>
+      <h1 class="text-8xl font-bold m-10">BOOT UP</h1>
+      <div class="grid grid-cols-3 gap-10">
+      <article>
+        <img src="./images/hello-world-fries.jpg">
+        <div class="grid grid-cols-2">
+        <h1 class="text-2xl font-bold">Hello World Fries</h1>
+        <h2 class="text-end text-rose-900">$5.00</h2>
+        </div>
+        <p>Everyone's first order. Crispy fries, sea salt, garlic aioli.</p>
+        <h3>VEGETARIAN</h3>
+      </article>
+  
+      <article>
+        <img src="./images/bug-bites.jpg">
+        <h1>Bug Bites</h1>
+        <h2>$8.00</h2>
+        <p>Crispy popcorn chicken you'll want to squash. Hot honey drizzle.</p>
+        <h3>SPICY</h3>
+      </article>
+     
+      <article>
+        <img src="./images/array-of-nachos.jpg">
+        <h1>Array of Nachos</h1>
+        <h2>$9.00</h2>
+        <p>Every index filled: cheese, jalapeños, pico de gallo, crema.</p>
+        <h3>SPICY</h3>
+      </article>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="text-8xl font-bold">MAIN FUNCTIONS</h1>
+      <div class="grid grid-cols-3 gap-10">
+      <article>
+        <img src="./images/full-stack-burger.jpg">
+        <h1>Full-Stack Burger</h1>
+        <h2>$14.00</h2>
+        <p>Front end to back end: brioche, two patties, cheddar, lettuce, tomato, stack sauce.</p>
+        <h3>POPULAR</h3>
+      </article>
+
+      <article>
+        <img src="./images/recursive-ramen.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+
+      <article>
+        <img src="./images/boolean-bowl.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+
+      <article>
+        <img src="./images/pepperoni-pi.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="text-9xl font-bold">SWEET SYNTAX</h1>
+      <div class="grid grid-cols-3 gap-10">
+      <article>
+        <img src="./images/cookie-session.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+
+      <article>
+        <img src="./images/stack-overflow-pancakes.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+
+      <article>
+        <img src="./images/infinite-loops.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="text-9xl font-bold">FUEL</h1>
+      <div class="grid grid-cols-2 gap-10">
+      <article>
+        <img src="./images/java.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+
+      <article>
+        <img src="./images/bubble-sort-boba.jpg">
+        <h1>Name</h1>
+        <h2>Price</h2>
+        <p>Description</p>
+        <h3>Tagline</h3>
+      </article>
+    </section>
+    </div>
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p id="footer-name"></p>
-    <p id="footer-info"></p>
+    <div class="bg-slate-950 p-20">
+    <p id="footer-name" class="text-5xl font-bold text-white">CODESTACK CAFE</p>
+    <p id="footer-info" class="text-white mt-6">ROOM 101 . MAIN CAMPUS . MON-FRI . 8AM-5PM . (555) 010-1010</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
 </html>
