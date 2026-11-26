@@ -13,7 +13,7 @@ export const categoriesFetch = async (id) => {
         throw new Error(`Server errror: ${res.status}`);
       }
 
-      return await json();
+      return await res.json();
 }
 
 export const restaurantFetch = async (id) => {
@@ -28,7 +28,7 @@ export const restaurantFetch = async (id) => {
         throw new Error(`Server errror: ${res.status}`);
       }
 
-      return await json();
+      return await res.json();
 }
 
 export const itemsFetch = async (id) => {
@@ -43,5 +43,5 @@ export const itemsFetch = async (id) => {
         throw new Error(`Server errror: ${res.status}`);
       }
 
-      return await json();
+      return await res.json();
 }

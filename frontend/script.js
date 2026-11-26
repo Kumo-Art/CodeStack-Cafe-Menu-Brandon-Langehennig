@@ -6,7 +6,7 @@ import { categoriesFetch, itemsFetch, restaurantFetch } from "./dataservices.js"
 //-------------------------grab elements----------------------------------------//
 
 const restName1 = document.getElementById("restaurant-name");
-const restName2 = document.getElementById("rest-name");
+
 
 
 
@@ -15,7 +15,10 @@ const restName2 = document.getElementById("rest-name");
 const restaurantName = async (id) => {
     
     const rest = await restaurantFetch(id);
-    console.log(rest);
+    restName1.textContent = rest.name;
 
-    
+    console.log(rest);
 }
+
+restaurantName(1);
+
